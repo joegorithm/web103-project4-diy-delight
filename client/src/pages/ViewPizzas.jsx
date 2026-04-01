@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import PizzasAPI from '../services/PizzasAPI';
 import '../App.css';
 import './ViewPizzas.css';
@@ -50,6 +51,23 @@ const ViewPizzas = () => {
             .join(' ');
     };
 
+    const handleDeletePizza = async (event, id) => {
+        event.preventDefault();
+
+        const shouldDelete = window.confirm('Delete this pizza?');
+        if (!shouldDelete) {
+            return;
+        }
+
+        try {
+            await PizzasAPI.deletePizza(id);
+            alert('Pizza deleted successfully!');
+            setPizzas((prevPizzas) => prevPizzas.filter((pizza) => pizza.id !== id));
+        } catch (error) {
+            alert('Error deleting pizza: ' + error.message);
+        }
+    }
+
     return (
         <div className="view-pizzas-page">
             <p className="view-pizzas-header">Pizza collection</p>
@@ -66,9 +84,12 @@ const ViewPizzas = () => {
             ) : (
                 <section className="pizza-grid">
                     {pizzas.map((pizza) => (
-                        <a href={`/pizzas/${pizza.id}`} className="pizza-card-link">
-                            <article className="pizza-card" key={pizza.id}>
-                                <a href={`/edit/${pizza.id}`} role="button">Edit</a>
+                        <article className="pizza-card" key={pizza.id}>
+                            <div className="pizza-controls">
+                                <Link to={`/edit/${pizza.id}`} role="button">Edit</Link>
+                                <button type="button" onClick={(event) => handleDeletePizza(event, pizza.id)}>Delete</button>
+                            </div>
+                            <Link to={`/pizzas/${pizza.id}`} className="pizza-card-link">
                                 <div className="pizza-card-display">
                                     {pizza.crust ? (
                                         <img src={`/src/assets/pizza-layers/crust/${pizza.crust}.png`} className="pizza-display-item" draggable="false" />
@@ -107,8 +128,8 @@ const ViewPizzas = () => {
                                         <p className="pizza-muted">No toppings selected.</p>
                                     )}
                                 </div>
-                            </article>
-                        </a>
+                            </Link>
+                        </article>
                     ))}
                 </section>
             )}
