@@ -1,0 +1,170 @@
+.pizza-details-page {
+    color: rgb(243, 247, 255);
+    padding: 2rem clamp(1rem, 3vw, 2.5rem) 3rem;
+}
+
+.pizza-details-header {
+    align-items: flex-end;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+}
+
+.pizza-details-kicker {
+    color: rgba(243, 247, 255, 0.6);
+    letter-spacing: 0.14em;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+}
+
+.pizza-details-header h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin: 0;
+}
+
+.pizza-details-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.pizza-details-action {
+    white-space: nowrap;
+}
+
+.pizza-details-layout {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+}
+
+.pizza-details-display-panel,
+.pizza-details-card,
+.pizza-details-status {
+    background: rgba(15, 18, 24, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.24);
+}
+
+.pizza-details-display-panel {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 20rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.pizza-details-display {
+    height: min(38rem, 80vw);
+    width: min(38rem, 100%);
+}
+
+.pizza-display {
+    position: relative;
+}
+
+.pizza-details-display .pizza-display-item {
+    left: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pizza-details-price {
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    color: rgb(255, 255, 255);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    padding: 0.55rem 1rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+}
+
+.pizza-details-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    height: fit-content;
+}
+
+.pizza-details-section h3 {
+    margin: 0 0 0.85rem;
+}
+
+.pizza-details-grid {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pizza-details-field {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem;
+}
+
+.pizza-details-label {
+    color: rgba(243, 247, 255, 0.55);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.pizza-details-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.pizza-details-chip {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 999px;
+    color: rgba(243, 247, 255, 0.9);
+    padding: 0.4rem 0.75rem;
+}
+
+.pizza-details-muted {
+    color: rgba(243, 247, 255, 0.62);
+    margin: 0;
+}
+
+.pizza-details-status {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 36rem;
+    padding: 1.75rem;
+}
+
+.pizza-details-error {
+    color: rgb(255, 233, 233);
+}
+
+@media (max-width: 900px) {
+    .pizza-details-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .pizza-details-display-panel {
+        min-height: 23rem;
+    }
+
+    .pizza-details-grid {
+        grid-template-columns: 1fr;
+    }
+}

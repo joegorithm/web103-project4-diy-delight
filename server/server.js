@@ -23,7 +23,7 @@ else if (process.env.NODE_ENV === 'production') {
 }
 
 // specify the api path for the server to use
-app.use('/pizzas', pizzasRouter);
+app.use('/api/pizzas', pizzasRouter);
 
 if (process.env.NODE_ENV === 'production') {
     app.get('/*', (_, res) =>

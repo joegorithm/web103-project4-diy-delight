@@ -1,21 +1,21 @@
-import React from 'react'
-import '../App.css'
-import '../css/Navigation.css'
+import React from 'react';
+import '../App.css';
+import './Navigation.css';
 
 const Navigation = () => {
     return (
         <nav>
             <ul>
-                <li><h1>Bolt Bucket 🏎️</h1></li>
+                <li><h1>Pizza Hutch 🍕</h1></li>
             </ul>
 
             <ul>
-                <li><a href='/' role='button'>Customize</a></li>
-                <li><a href='/customcars' role='button'>View Cars</a></li>
+                <li><a href='/' role='button'>Build Pizza</a></li>
+                <li><a href='/pizzas' role='button'>View Pizza Collection</a></li>
             </ul>
             
         </nav>
-    )
+    );
 }
 
-export default Navigation
+export default Navigation;

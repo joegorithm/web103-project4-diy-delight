@@ -1,0 +1,65 @@
+.create-edit-pizza-container {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.pizza-display-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pizza-display {
+    width: 700px;
+    height: 700px;
+    position: relative;
+    user-select: none;
+}
+
+.pizza-display-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+form {
+    background-color: rgb(15, 18, 24);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+    width: 22rem;
+    padding-top: 1rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.scrollable-pizza-form {
+    height: 32rem;
+    overflow-y: scroll;
+    padding: 1.5rem;
+}
+
+.submit-button {
+    margin: 1rem !important;
+    min-width: calc(100% - 2rem);
+}
+
+.price-indicator {
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    padding: 1rem;
+    background-color: rgb(15, 18, 24);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
+    border-radius: 0 1rem 1rem 0;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: var(--font-family);;
+    color: white;
+}
+
+.pizza-layer-price {
+    color: rgba(221, 227, 255, 0.43);
+}

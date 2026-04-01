@@ -1,0 +1,96 @@
+.view-pizzas-page {
+    color: rgb(243, 247, 255);
+    padding: 2rem clamp(1rem, 3vw, 2.5rem) 3rem;
+}
+
+.view-pizzas-header {
+    color: rgba(243, 247, 255, 0.6);
+    letter-spacing: 0.14em;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+}
+
+.view-pizzas-status,
+.view-pizzas-empty {
+    background: rgba(15, 18, 24, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+}
+
+.view-pizzas-error {
+    color: rgb(255, 194, 194);
+}
+
+.view-pizzas-empty h3 {
+    margin-top: 0;
+}
+
+.pizza-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pizza-card-link {
+    text-decoration: none;
+}
+
+.pizza-card {
+    background: linear-gradient(180deg, rgba(15, 18, 24, 0.96), rgba(10, 12, 16, 0.96));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.32);
+    padding: 1.25rem;
+}
+
+.pizza-card-display {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    justify-self: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.pizza-card-header {
+    align-items: flex-start;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.pizza-card-header h3 {
+    margin: 0;
+}
+
+.pizza-price {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+    white-space: nowrap;
+    color: white;
+}
+
+.pizza-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.85rem 0 0.25rem;
+}
+
+.pizza-meta span {
+    background: rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 999px;
+    font-size: 0.9rem;
+    padding: 0.35rem 0.7rem;
+}
+
+.pizza-section h4 {
+    margin: 0 0 0.6rem;
+}
+
+.pizza-muted {
+    color: rgba(243, 247, 255, 0.6);
+    margin: 0;
+}

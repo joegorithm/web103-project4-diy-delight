@@ -1,13 +1,15 @@
-const API_BASE = '/pizzas';
+const API_BASE = '/api/pizzas';
 
 const request = async (path = '', options = {}) => {
     const response = await fetch(`${API_BASE}${path}`, options);
+    const isJsonResponse = response.headers.get('content-type')?.includes('application/json');
+    const responseBody = isJsonResponse ? await response.json() : null;
 
     if (!response.ok) {
-        throw new Error(`Pizzas API request failed with status ${response.status}`);
+        throw new Error(responseBody?.error || responseBody?.message || `Pizzas API request failed with status ${response.status}`);
     }
 
-    return response.json();
+    return responseBody;
 }
 
 const getAllPizzas = async () => request();

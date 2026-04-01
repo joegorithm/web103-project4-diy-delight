@@ -1,5 +1,7 @@
-import pool from './database.js';
-import 'dotenv.js';
+import { pool } from './database.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const createPizzasTable = async () => {
     const createTableQuery = `
@@ -11,6 +13,7 @@ const createPizzasTable = async () => {
             price NUMERIC(10,2) NOT NULL,
             crust TEXT NOT NULL,
             sauce TEXT NOT NULL,
+            cheese TEXT NOT NULL,
             toppings TEXT[] NOT NULL
         )
     `;
@@ -22,3 +25,5 @@ const createPizzasTable = async () => {
         console.error('⚠️ error creating pizzas table', error);
     }
 }
+
+createPizzasTable().finally(() => pool.end());
