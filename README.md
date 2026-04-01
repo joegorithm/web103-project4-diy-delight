@@ -2,7 +2,7 @@
 
 Submitted by: **Jonathan Hill**
 
-About this web app: **App description here**
+About this web app: **Pizza Hutch allows hungry customers to assemble custom pizzas with a live pizza visualizers, store pizza creations in a database using PostgreSQL, and also view, edit, and delete the saved pizzas.**
 
 Time spent: **16** hours
 
@@ -34,7 +34,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] Created PNG layered pizza visualizer
+- [x] Created PNG layered pizza visualizer
 
 ## Video Walkthrough
 
@@ -46,7 +46,7 @@ GIF created with Kap
 
 ## Notes
 
-Ran into bugs with connecting server and frontend.
+I ran into several bugs with connecting server and frontend but was able to fix them eventually.
 
 ## License
 
