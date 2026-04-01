@@ -68,6 +68,7 @@ const ViewPizzas = () => {
                     {pizzas.map((pizza) => (
                         <a href={`/pizzas/${pizza.id}`} className="pizza-card-link">
                             <article className="pizza-card" key={pizza.id}>
+                                <a href={`/edit/${pizza.id}`} role="button">Edit</a>
                                 <div className="pizza-card-display">
                                     {pizza.crust ? (
                                         <img src={`/src/assets/pizza-layers/crust/${pizza.crust}.png`} className="pizza-display-item" draggable="false" />

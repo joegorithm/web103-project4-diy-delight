@@ -63,3 +63,8 @@ form {
 .pizza-layer-price {
     color: rgba(221, 227, 255, 0.43);
 }
+
+.delete-button-container {
+    height: 38rem;
+    padding-right: 2rem;
+}

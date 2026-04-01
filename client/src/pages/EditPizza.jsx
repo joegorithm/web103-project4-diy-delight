@@ -205,6 +205,23 @@ const EditPizza = () => {
             </div>
         );
     }
+
+    const handleDeletePizza = async (event) => {
+        event.preventDefault();
+
+        const shouldDelete = window.confirm('Delete this pizza?');
+        if (!shouldDelete) {
+            return;
+        }
+
+        try {
+            await PizzasAPI.deletePizza(id);
+            alert('Pizza deleted successfully!');
+            navigate('/pizzas');
+        } catch (error) {
+            alert('Error deleting pizza: ' + error.message);
+        }
+    }
     
     return (
         <>
@@ -234,6 +251,9 @@ const EditPizza = () => {
                             ""
                         )}
                     </div>
+                </div>
+                <div className="delete-button-container">
+                    <button type="button" onClick={handleDeletePizza}>Delete</button>
                 </div>
                 <form onSubmit={updatePizza}>
                     <center><h2>Pizza Builder</h2></center>
